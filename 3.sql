@@ -5,6 +5,6 @@ where abilities.id in (
     select ability_id
     from pokemon_abilities
     group by ability_id
-    having count(distinct pokemon_id) = 1
+    having count(pokemon_id) = 1
 )
 order by lower(pokemon.identifier) asc;
